@@ -1,0 +1,25 @@
+Audio Gender Identification Using Machine Learning and Python 
+
+Background noise removal is applied. 
+
+Libraries to install:
+	pip install pickle
+	pip install python_speech_features
+	pip install pysndfx
+	pip install librosa
+
+ML - Training: 
+- training.py
+- Gaussian mixture models for classification
+- Trained on 559 female clips and 547 male clips (in train_data folder)
+- the two .gmm files in the folder are the latest trained versions of the clips 
+  (it took 950s to train each .gmm file)
+
+ML - Test and Validation:
+- test.py
+- feeds in the already trained GMM file
+
+This can be applied to other audio identification applications, like voice recognition and other classifications. Each “group” needs a .gmm file. 
+
+Note: 
+This fusion equation doesn’t work for males who talk in high pitch (like the recording ./test_data/male/male5.wav)
